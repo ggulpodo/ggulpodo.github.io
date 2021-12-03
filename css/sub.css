@@ -1,0 +1,669 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/kopubbatang.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    color: #666666;
+    line-height: 1.65;
+    letter-spacing: 0;
+    font-weight: 400;
+    user-select: none;
+}
+
+/* 공통사항 */
+.container {
+    position: relative;
+    display: block;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    /* user-select: none; */
+}
+
+.clearfix:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+/* header */
+.header {
+    position: relative;
+    display: block;
+    margin: 2rem 0 2rem 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+}
+
+.sub-gnb {
+    text-align: right;
+}
+
+.sub-depth1>li {
+    position: relative;
+    display: inline;
+    vertical-align: center;
+}
+
+.sub-depth1>li>a {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: #e0e0e0;
+    text-align: center;
+    margin: 0 1.5rem;
+}
+
+.sub-depth1>li.on>a {
+    color: #666666;
+}
+
+.sub-depth1>li>:last-child {
+    margin-right: 0;
+}
+
+.sub-gnb>ul:nth-child(1) {
+    color: #666666;
+}
+
+/* profile */
+.profile .container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.profile-about {
+    font-size: 2rem;
+    color: #fb5810;
+    margin-top: 7rem;
+    padding-left: 1.5rem;
+}
+
+.profile-about::before {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    top: 1rem;
+    display: block;
+    width: 0.2rem;
+    height: 1.5rem;
+    background-color: #e0e0e0;
+}
+
+.profile-cont {
+    position: relative;
+    margin: 10rem 0;
+    display: block;
+}
+
+.profile-left {
+    float: left;
+
+}
+
+.profile-img {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+.profile-words {
+    position: relative;
+    width: 43.6rem;
+    height: 42.2rem;
+    display: block;
+    margin-top: 5rem;
+    background: url("../images/profile-words.jpg") no-repeat center;
+}
+
+.profile-words>ul {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-family: 'Batang', serif;
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 550;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.profile-words>ul>li:nth-child(1) {
+    text-align: left;
+}
+
+.profile-words>ul>li:nth-child(2) {
+    text-align: right;
+}
+
+.profile-words>ul>li:nth-child(3) {
+    text-align: center;
+}
+
+.big-font {
+    font-size: 7rem;
+}
+
+.profile-right {
+    position: relative;
+    width: 60rem;
+    line-height: 1.7rem;
+    display: block;
+    float: right;
+}
+
+.profile-right>ul {
+    color: #fb5810;
+    font-size: 2rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.profile-right>ul:last-child {
+    margin-bottom: 0;
+}
+
+.profile-right>ul:nth-child(1)::before {
+    content: "Introduce";
+}
+
+.profile-right>ul:nth-child(2)::before {
+    content: "Education";
+    right: 0;
+}
+
+.profile-right>ul:nth-child(3)::before {
+    content: "Activies";
+}
+
+.profile-right>ul:nth-child(4)::before {
+    content: "Certification";
+}
+
+.profile-right>ul:nth-child(5)::before {
+    content: "Skills";
+}
+
+.profile-right>ul>li {
+    color: #666666;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.profile-right>ul:nth-child(odd) {
+    text-align: left;
+}
+
+.profile-right>ul:nth-child(even) {
+    text-align: right;
+}
+
+.profile-right>ul:nth-child(2) {
+    position: relative;
+}
+.profile-right>ul:nth-child(2)::after{
+    width: 2px;
+    height: 73%;
+    background-color: #e0e0e0;
+    content:"";
+    position: absolute;
+    top: 62%;
+    transform: translateY(-50%);
+    right: 49px;
+}
+.profile-right>ul:nth-child(2) li{
+    padding-right: 7rem;
+    position: relative;
+}
+.profile-right>ul:nth-child(2) li:nth-child(1)::before{
+    content:"2021";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+.profile-right>ul:nth-child(2) li:nth-child(2)::before{
+    content:"2021";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+.profile-right>ul:nth-child(2) li:nth-child(3)::before{
+    content:"2016";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+.profile-right>ul:nth-child(2) li:nth-child(1)::after{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    right: 47.5px;
+    top: 25%;
+    transform: translateY(-50%);
+}
+.profile-right>ul:nth-child(2) li:nth-child(2)::after{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    right: 47.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.profile-right>ul:nth-child(2) li:nth-child(3)::after{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    right: 47.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-right>ul:nth-child(3) li:nth-child(1)::after{
+    content:"실무 프로젝트 (예정)";
+    position: absolute;
+    font-size: 1.5rem;
+    left: 7rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-right>ul:nth-child(3) li:nth-child(2)::after{
+    content:"DU 전공 체험 프로그램 진행";
+    position: absolute;
+    font-size: 1.5rem;
+    left: 7rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.profile-right>ul:nth-child(3)::after{
+    width: 2px;
+    height: 55%;
+    background-color: #e0e0e0;
+    content:"";
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    left: 49px;
+}
+.profile-right>ul:nth-child(3) li:nth-child(1)::before{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    left: 47.5px;
+    top: 50%;
+    transform: translateY(-25%);
+}
+.profile-right>ul:nth-child(3) li:nth-child(2)::before{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    left: 47.5px;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+
+
+
+/* publishing */
+.publishing .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* overflow: hidden; */
+    /* background-color:green; */
+}
+
+.publishing-tit {
+    font-size: 2rem;
+    color: #fb5810;
+    font-weight: 600;
+    margin-top: 7rem;
+    padding-left: 1.5rem;
+}
+
+.publishing-tit::before {
+    content: "";
+    position: absolute;
+    left: 0rem;
+    top: 1rem;
+    display: block;
+    width: 0.2rem;
+    height: 1.5rem;
+    background-color: #e0e0e0;
+}
+/* swiper 관련 */
+.swiper{
+    /* margin: 10rem auto; */
+    width: 100%;
+    height: 100%;
+    overflow-y: visible;
+}
+
+.swiper-container{
+    width: 100rem;
+    height: 60rem;
+    margin: 10rem auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: all .3s ease 0.3s;
+}
+
+
+
+.swiper-slide img {
+    position: relative;
+    display: block;
+    object-fit: cover;
+    top: -25%;
+    /* width: 70%; */
+}
+
+.slide-cont {
+    position: absolute;
+    display: block;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0rem;
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-pagination-bullet{
+    margin: 0 0.5rem;
+}
+.swiper-button-next{
+    outline: none;
+}
+.swiper-button-prev {
+    outline: none;
+    color: #fb5810;
+}
+.swiper-button-next::after{
+    outline: none;
+    color: #fb5810;
+}
+
+
+/* frontend */
+.frontend .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* background-color:green; */
+}
+
+.frontend-tit {
+    font-size: 2rem;
+    color: #fb5810;
+    font-weight: 600;
+    margin-top: 7rem;
+    padding-left: 1.5rem;
+}
+
+.frontend-tit::before {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    top: 1rem;
+    display: block;
+    width: 0.2rem;
+    height: 1.5rem;
+    background-color: #e0e0e0;
+}
+
+
+/* life */
+.life .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* background-color:green; */
+}
+
+.life-tit {
+    font-size: 2rem;
+    color: #fb5810;
+    font-weight: 600;
+    margin-top: 7rem;
+    padding-left: 1.5rem;
+}
+
+.life-tit::before {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    top: 1rem;
+    display: block;
+    width: 0.2rem;
+    height: 1.5rem;
+    background-color: #e0e0e0;
+}
+
+.life-cont {
+    position: relative;
+    margin: 10rem 0;
+    display: block;
+    /* background-color: green; */
+}
+
+.life-l {
+    float: left;
+    width: 60rem;
+}
+
+.life-l>ul {
+    text-align: center;
+    padding-left: 15rem;
+    font-size: 1.7rem;
+    color: #666666;
+}
+
+.life-l>ul>li {
+    height: 26.7rem;
+    margin-bottom: 8.5rem;
+}
+
+.life-l>ul>li>a {
+    font-family: 'Batang', serif;
+    font-size: 3rem;
+    letter-spacing: 0;
+    color: #92a1b4;
+}
+
+.life-r {
+    float: right;
+    width: 60rem;
+    text-align: right;
+    padding-right: 15rem;
+}
+
+.life-r>ul>li>img {
+    box-shadow: 0.3rem 0.3rem 0.6rem 0.1rem gray;
+}
+
+.life-r>ul>li {
+    margin-bottom: 8.5rem;
+}
+
+.life-r>ul>li::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 18rem;
+    height: 9.2rem;
+    background: url('../images/clip.png') no-repeat center;
+    transform: translate(106%, -142%);
+    /* transform: translateY(-132%); */
+}
+
+
+/* contact */
+.contact .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* background-color:green; */
+}
+
+.contact-tit {
+    font-size: 2rem;
+    color: #fb5810;
+    font-weight: 600;
+    margin-top: 7rem;
+    padding-left: 1.5rem;
+}
+
+.contact-tit::before {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    top: 1rem;
+    display: block;
+    width: 0.2rem;
+    height: 1.5rem;
+    background-color: #e0e0e0;
+}
+
+.contact-box {
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 60rem;
+    width: 100%;
+    background: #e0e0e0;
+    padding: 2.5rem;
+    /* margin-bottom: 10rem; */
+}
+
+.contact-box .input_field {
+    margin-bottom: 1.5rem;
+}
+
+.contact-box .input_field input[type="text"],
+.contact-box textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    height: 4rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem gray;
+}
+
+.contact-box textarea {
+    height: 15rem;
+    resize: none;
+    margin-bottom: 4rem;
+}
+
+.contact-box .btn input[type="submit"] {
+    border: 0;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 10rem;
+    color: #fff;
+    background: #fb5810;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+
+.contact-box #error_message {
+    margin-bottom: 2rem;
+    padding: 0rem;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 3rem;
+    transition: all 0.5s ease;
+}
