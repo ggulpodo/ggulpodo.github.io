@@ -375,8 +375,6 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    /* overflow: hidden; */
-    /* background-color:green; */
 }
 
 .publishing-tit {
@@ -413,9 +411,10 @@ body {
 }
 
 .swiper-slide {
+    position: relative;
     text-align: center;
-    font-size: 18px;
-    background: #fff;
+    font-size: 1.7rem;
+    /* background: #fff; */
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -433,20 +432,48 @@ body {
     transition: all .3s ease 0.3s;
 }
 
-
-
-.swiper-slide img {
+.swiper-slide >img {
     position: relative;
-    display: block;
     object-fit: cover;
-    top: -25%;
-    /* width: 70%; */
+    height: auto;
+    opacity: 1.0;
+    transition: .6s;
+    top: -18%;
 }
 
-.slide-cont {
-    position: absolute;
-    display: block;
+.swiper-slide:hover > img {
+    opacity: .2;
 }
+.swiper-slide:hover ul {
+    opacity: 1;
+}
+
+.swiper-slide ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-26%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.swiper-slide ul>li {
+    margin: 1rem 0;
+}
+.swiper-slide ul>li>a>img {
+    margin: 0 0.5rem;
+}
+.swiper-slide ul>li>a {
+    color: #666666;
+    /* font-weight: 500; */
+}
+
+/* .site-tag>ul {
+    display: flex;
+    justify-content: center;
+} */
 
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -455,6 +482,24 @@ body {
     bottom: 0rem;
     text-align: center;
     width: 100%;
+}
+.slide-cont {
+    display: none;
+}
+.slide-cont:nth-child(3) {
+    display: block;
+}
+.slide-cont>ul {
+    position: absolute;
+    top: 57rem;
+    left: 50%;
+    color: #666666;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 1.5;
+    transform: translateX(-50%);
+    display: block;
+    z-index: 5;
 }
 
 .swiper-pagination-bullet{
@@ -478,7 +523,6 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    /* background-color:green; */
 }
 
 .frontend-tit {
@@ -506,7 +550,6 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    /* background-color:green; */
 }
 
 .life-tit {
@@ -613,7 +656,7 @@ body {
     background-color: #e0e0e0;
 }
 
-.contact-box {
+/* .contact-box {
     position: absolute;
     top: 10rem;
     left: 50%;
@@ -622,7 +665,6 @@ body {
     width: 100%;
     background: #e0e0e0;
     padding: 2.5rem;
-    /* margin-bottom: 10rem; */
 }
 
 .contact-box .input_field {
@@ -666,4 +708,4 @@ body {
     text-align: center;
     font-size: 3rem;
     transition: all 0.5s ease;
-}
+} */

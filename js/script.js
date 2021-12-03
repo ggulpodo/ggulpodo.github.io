@@ -54,6 +54,7 @@ window.onload = function () {
         },
         loop: true,
         spaceBetween: 10,
+        
 
         // 좌우이동
         navigation: {
@@ -68,6 +69,10 @@ window.onload = function () {
             clickable: true,
         }
 
+    });
+    
+    swiper.on('transitionEnd', function() {
+        $(".slide-cont").hide().eq(swiper.realIndex).show()
     });
     
 }
