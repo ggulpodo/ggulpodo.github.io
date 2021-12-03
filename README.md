@@ -1,1 +1,0 @@
-# ggulpodo.github.io
