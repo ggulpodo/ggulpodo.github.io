@@ -35,7 +35,7 @@ body {
     line-height: 1.65;
     letter-spacing: 0;
     font-weight: 400;
-    user-select: none;
+    /* user-select: none; */
 }
 
 /* 공통사항 */
@@ -654,30 +654,28 @@ body {
 }
 
 .slide-cont img {
-    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+.slide-cont:nth-child(3) li:nth-child(1)>img {
+    width: 82px;
 }
 
-.slide-cont:nth-child(4) li:nth-child(1) {
-    width: 121px;
-    height: 36px;
+.slide-cont:nth-child(4) li:nth-child(1)>img {
+    width: 75px;
 }
 
-.slide-cont:nth-child(5) li:nth-child(1) {
-    width: 109px;
-    height: 36px;
+.slide-cont:nth-child(5) li:nth-child(1)>img {
+    width: 76px;
 }
 
-.slide-cont:nth-child(6) li:nth-child(1) {
-    width: 150px;
-    height: 36px;
+.slide-cont:nth-child(6) li:nth-child(1)>img {
+    width: 103px;
 }
 
-.slide-cont:nth-child(7) li:nth-child(1) {
-    width: 138px;
-    height: 36px;
+.slide-cont:nth-child(7) li:nth-child(1)>img {
+    width: 78px;
 }
-
-
 
 .swiper-pagination-bullet {
     margin: 0 0.5rem;
@@ -697,6 +695,17 @@ body {
     color: #fb5810;
 }
 
+span.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    transition: width 0.5s;
+    border-radius: 5px !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fb5810 !important;
+    width: 30px;
+}
 
 /* frontend */
 .frontend .container {
@@ -743,6 +752,7 @@ body {
 }
 
 .life-tit {
+    position: relative;
     font-size: 2rem;
     color: #fb5810;
     font-weight: 600;
@@ -836,27 +846,35 @@ body {
 }
 
 .life-r>ul>li {
+    position: relative;
     margin-bottom: 8.5rem;
     /* overflow: hidden; */
     animation: slideDown2 1.5s ease-in;
     animation-fill-mode: both;
 }
+.life-r>ul>li:nth-child(1) {
+    z-index: 3;
+}
 
 .life-r>ul>li:nth-child(2) {
     animation-delay: 2s;
+    z-index: 2;
 }
 
 .life-r>ul>li:nth-child(3) {
     animation-delay: 4s;
+    z-index: 1;
 }
 
 @keyframes slideDown2 {
     0% {
         margin-top: -300px;
+        opacity: 0;
     }
 
     100% {
         margin-top: 0;
+        opacity: 1;
     }
 }
 
@@ -902,8 +920,8 @@ body {
 .openkakao {
     position: relative;
     display: block;
-    width: 65rem;
-    height: 65rem;
+    width: 48rem;
+    height: 48rem;
     background: #e0e0e0;
     margin: 13.5rem auto;
 }
@@ -918,64 +936,10 @@ body {
 .openkakao::after {
     content: '';
     position: absolute;
-    right: -3.5rem;
-    top: -3.5rem;
+    right: -2.5rem;
+    top: -2.5rem;
     display: block;
-    width: 7rem;
-    height: 7rem;
+    width: 5.5rem;
+    height: 5.5rem;
     background-color: #92a1b4;
 }
-
-/* .contact-box {
-    position: absolute;
-    top: 10rem;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 60rem;
-    width: 100%;
-    background: #e0e0e0;
-    padding: 2.5rem;
-}
-
-.contact-box .input_field {
-    margin-bottom: 1.5rem;
-}
-
-.contact-box .input_field input[type="text"],
-.contact-box textarea {
-    width: 100%;
-    border: none;
-    border-radius: 0.5rem;
-    height: 4rem;
-    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem gray;
-}
-
-.contact-box textarea {
-    height: 15rem;
-    resize: none;
-    margin-bottom: 4rem;
-}
-
-.contact-box .btn input[type="submit"] {
-    border: 0;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    width: 10rem;
-    color: #fff;
-    background: #fb5810;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.5rem;
-    font-weight: bold;
-    border-radius: 2.5rem;
-    cursor: pointer;
-}
-
-.contact-box #error_message {
-    margin-bottom: 2rem;
-    padding: 0rem;
-    background: #fe8b8e;
-    text-align: center;
-    font-size: 3rem;
-    transition: all 0.5s ease;
-} */
