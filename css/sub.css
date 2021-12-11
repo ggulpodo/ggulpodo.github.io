@@ -65,22 +65,36 @@ body {
 .header {
     position: relative;
     display: block;
-    margin: 2rem 0 2rem 0;
+    width: 100%;
+    height: 4rem;
+    margin: 2rem 0;
+    z-index: 999999;
 }
 
 .header .container {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    justify-content: space-between;
+    position: relative;
+    display: block;
+    height: 100%;
 }
 
 .logo {
-    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.logo img {
+    width: 4rem;
+    height: 4rem;
 }
 
 .sub-gnb {
-    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .sub-depth1>li {
@@ -144,7 +158,6 @@ body {
 
 .profile-left {
     float: left;
-
 }
 
 .profile-img {
@@ -482,6 +495,64 @@ body {
     transform: translateY(-50%);
 }
 
+/* profile 반응형 1024px */
+@media screen and (max-width:1024px) {
+    .container {
+        width: 80% !important;
+    }
+    .profile-left {
+        position: relative;
+        width: 100%;
+    }
+
+    .profile-img {
+        float: left;
+        margin-left: 6rem;
+    }
+
+    .profile-words {
+        float: right;
+        width: 34.5rem;
+        height: 25rem;
+        background: url("../images/profile-words.jpg") no-repeat center / contain;
+        margin-top: 0rem;
+        display: block;
+        margin-right: 6rem;
+    }
+    .profile-words>ul {
+        font-size: 2rem;
+    }
+    .big-font {
+        font-size: 5rem;
+    }
+    .profile-right {
+        width: 100%;
+        margin-top: 6rem;
+    }
+
+}
+
+/* profile 반응형 768px */
+@media screen and (max-width:768px) {
+    .profile-cont img {
+        width: 20rem;
+        height: 20rem;
+        margin-left: 4rem;
+    }
+    .profile-words {
+        width: 28rem;
+        height: 20rem;
+        margin-right: 4rem;
+    }
+    .profile-words>ul {
+        font-size: 1.8rem;
+    }
+    .big-font {
+        font-size: 4rem;
+    }
+}
+
+
 /* publishing */
 .publishing .container {
     position: relative;
@@ -510,124 +581,88 @@ body {
 
 /* swiper 관련 */
 .swiper {
-    /* margin: 10rem auto; */
-    width: 100%;
-    height: 100%;
-    overflow-y: visible;
+    position: relative;
+    width: 100rem;
+    height: 40rem;
+    margin: 10rem auto;
 }
 
 .swiper-container {
-    width: 100rem;
-    height: 60rem;
-    margin: 10rem auto;
-    overflow: hidden;
-}
-
-.swiper-slide {
-    position: relative;
-    text-align: center;
-    font-size: 1.7rem;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    transition: all .3s ease 0.3s;
-}
-
-.swiper-slide .slide-img {
-    position: relative;
-    width: 30rem;
-    height: 40rem;
-    opacity: 1.0;
-    transition: .6s;
-    top: -16%;
-    /* background-color: green; */
-    /* border: #666666 1px solid; */
-    border-radius: 5rem;
-}
-
-.swiper-slide .slide-img>img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-size: cover;
-    border-radius: 5rem;
 }
 
 .swiper-slide {
+    position: relative;
+    border-radius: 8rem;
     overflow: hidden;
 }
 
-.swiper-slide:hover ul {
-    opacity: 1;
+.slide-black-bg {
+    transition: background 0.5s;
+}
+
+.swiper-slide:hover .slide-black-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(102, 102, 102, 0.7);
+}
+
+.slide-01 {
+    background: url('../images/jebportfolio.jpg') no-repeat center / cover;
+}
+.slide-02 {
+    background: url('../images/sony1.jpg') no-repeat center / cover;
+}
+.slide-03 {
+    background: url('../images/nexus.jpg') no-repeat center / cover;
+}
+.slide-04 {
+    background: url('../images/spc.jpg') no-repeat center / cover;
+}
+.slide-05 {
+    background: url('../images/inha.jpg') no-repeat center / cover;
+}
+.slide-06 {
+    background: url('../images/stx.jpg') no-repeat center / cover;
 }
 
 .swiper-slide ul {
     position: absolute;
-    top: 13rem;
-    left: 0;
-    width: 100%;
-    height: 27.5rem;
-    opacity: 0;
-    transition: .6s;
-    z-index: 999;
-}
-
-.swiper-slide:hover .slide-img::before {
-    content: '';
-    position: absolute;
     left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 30rem;
-    height: 40rem;
-    z-index: 9;
-    /* background-color: #fff; */
-    background-color: rgba(102, 102, 102, 0.7);
-    border-radius: 5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .swiper-slide ul>li {
-    position: relative;
-    margin: 1.7rem auto;
-    border: 1px #e0e0e0 solid;
-    width: 12rem;
+    text-align: center;
+    width: 10rem;
     height: 3rem;
-    line-height: calc(3rem - 5px);
+    border: 1px solid #e0e0e0;
 }
 
-.site-tag ul>li>a {
-    display: inline-block;
+.swiper-slide ul>li:first-child {
+    margin-bottom: 1rem;
+}
+
+.swiper-slide ul>li>a {
+    display: block;
     width: 100%;
+    height: 100%;
     color: #e0e0e0;
-    font-size: 1.3rem;
     font-weight: 200;
 }
 
-/* .site-tag>ul {
-    display: flex;
-    justify-content: center;
-} */
+.swiper-button-next {
+    right: -7rem;
+}
 
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-    bottom: 0rem;
+.swiper-button-prev {
+    left: -7rem;
+}
+
+.swiper-pagination-bullets {
+    bottom: -10rem;
     text-align: center;
     width: 100%;
 }
@@ -652,29 +687,41 @@ body {
     display: block;
     z-index: 5;
 }
-
-.slide-cont img {
+.slide-cont li:nth-child(1) {
     height: 2.5rem;
+    width: 20rem;
     margin-bottom: 1rem;
-}
-.slide-cont:nth-child(3) li:nth-child(1)>img {
-    width: 82px;
+    font-size: 0;
 }
 
-.slide-cont:nth-child(4) li:nth-child(1)>img {
-    width: 75px;
+/* 포폴 */
+.slide-cont:nth-child(3) li:nth-child(1) {
+    background: url("../images/worklogo.jpg") no-repeat center / contain;
 }
 
-.slide-cont:nth-child(5) li:nth-child(1)>img {
-    width: 76px;
+/* 소니 */
+.slide-cont:nth-child(4) li:nth-child(1) {
+    background: url("../images/sony.jpg") no-repeat center / contain;
 }
 
-.slide-cont:nth-child(6) li:nth-child(1)>img {
-    width: 103px;
+/* 넥서스 */
+.slide-cont:nth-child(5) li:nth-child(1) {
+    background: url("../images/nexuslogo.png") no-repeat center / contain;
 }
 
-.slide-cont:nth-child(7) li:nth-child(1)>img {
-    width: 78px;
+/* spc */
+.slide-cont:nth-child(6) li:nth-child(1) {
+    background: url("../images/spclogo.png") no-repeat center / contain;
+}
+
+/* 인하대하교 */
+.slide-cont:nth-child(7) li:nth-child(1) {
+    background: url("../images/Signature_LR01.png") no-repeat center / contain;
+}
+
+/* stx건설 */
+.slide-cont:nth-child(8) li:nth-child(1) {
+    background: url("../images/stxlogo.png") no-repeat center / contain;
 }
 
 .swiper-pagination-bullet {
@@ -774,6 +821,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .life-cont {
     position: relative;
     margin: 10rem 0;
+    height: 105.6rem;
     display: block;
     /* background-color: green; */
 }
@@ -852,6 +900,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     animation: slideDown2 1.5s ease-in;
     animation-fill-mode: both;
 }
+
 .life-r>ul>li:nth-child(1) {
     z-index: 3;
 }
