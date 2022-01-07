@@ -186,7 +186,7 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
-    font-family: 'Batang', serif;
+    /* font-family: 'Batang', serif; */
     font-style: italic;
     font-size: 3rem;
     font-weight: 550;
