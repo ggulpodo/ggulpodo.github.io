@@ -1,11 +1,11 @@
 window.onload = function () {
 
     
-    let muenu_icon = $('.muenu-icon');
+    let menu_icon = $('.menu-icon');
     let menu_icon_gnb = $('.menu-icon-gnb');
     let black_bg = $('.black-bg');
 
-    muenu_icon.click(function () {
+    menu_icon.click(function () {
         black_bg.addClass('black-bg-show');
         menu_icon_gnb.addClass('gnb-show');
     });
