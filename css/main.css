@@ -110,6 +110,9 @@ body {
     text-align: center;
     margin: 0 3rem;
 }
+.menu-icon-gnb {
+    display: none;
+}
 
 
 /* main visual */
@@ -180,5 +183,84 @@ body {
     .visual .container::after {
         width: 1px;
         height: 18.5rem;
+    }
+}  
+
+@media screen and (max-width:768px) {
+    .black-bg {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 6;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .black-bg-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    .logo img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .gnb {
+        display: none;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0;
+        background: url('../images/close.png') no-repeat center / contain;
+        margin: 3rem 3rem 0 0;
+        display: block;
+        z-index: 3;
+    }
+    .muenu-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 0;
+        transform: translateY(-50%);
+        background: url('../images/open-kakao01.png') no-repeat center / contain;
+    }
+    .muenu-icon,
+    .menu-icon-gnb {
+        display: block;
+    }
+    .menu-icon-gnb {
+        position: absolute;
+        top: 0;
+        right: -35%;
+        width: 35%;
+        height: 100vh;
+        font-size: 1.7rem;
+        padding: 8rem 2rem 0 2rem;
+        margin-top: -2rem;
+        border-left: 2px solid #e0e0e0;
+        background-color: #fff;
+        transition: 0.5s;
+    }
+    .gnb-show {
+        right: 0;
+    }
+    .menu-icon-gnb-depth1 >li{
+        line-height: 8rem;
+        border-bottom: 2px solid #e0e0e0;
+        padding-left: 1.5rem;
+    }
+    .menu-icon-gnb-depth1 >li:last-child {
+        border-bottom: none;
+    }
+    .menu-icon-gnb-depth1 >li >a {
+        color: #666666;
     }
 }

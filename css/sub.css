@@ -91,6 +91,12 @@ body {
     height: 4rem;
 }
 
+
+.muenu-icon,
+.menu-icon-gnb {
+    display: none;
+}
+
 .sub-gnb {
     position: absolute;
     right: 0;
@@ -173,7 +179,7 @@ body {
     height: 42.2rem;
     display: block;
     margin-top: 5rem;
-    background: url("../images/profile-words.jpg") no-repeat center;
+    background: url('../images/profile-words.jpg') no-repeat center;
 }
 
 .profile-words>ul {
@@ -224,24 +230,24 @@ body {
 }
 
 .profile-right>ul:nth-child(1)::before {
-    content: "Introduce";
+    content: 'Introduce';
 }
 
 .profile-right>ul:nth-child(2)::before {
-    content: "Education";
+    content: 'Education';
     right: 0;
 }
 
 .profile-right>ul:nth-child(3)::before {
-    content: "Activies";
+    content: 'Activies';
 }
 
 .profile-right>ul:nth-child(4)::before {
-    content: "Certification";
+    content: 'Certification';
 }
 
 .profile-right>ul:nth-child(5)::before {
-    content: "Skills";
+    content: 'Skills';
 }
 
 .profile-right>ul>li {
@@ -267,7 +273,7 @@ body {
     width: 2px;
     height: 73%;
     background-color: #e0e0e0;
-    content: "";
+    content: '';
     position: absolute;
     top: 62%;
     transform: translateY(-50%);
@@ -280,7 +286,7 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(1)::before {
-    content: "2021";
+    content: '2021';
     position: absolute;
     right: 0;
     top: 0;
@@ -288,7 +294,7 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(2)::before {
-    content: "2021";
+    content: '2021';
     position: absolute;
     right: 0;
     top: 0;
@@ -296,7 +302,7 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(3)::before {
-    content: "2016";
+    content: '2016';
     position: absolute;
     right: 0;
     top: 0;
@@ -304,7 +310,7 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(1)::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 5px;
     height: 5px;
@@ -316,7 +322,7 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(2)::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 5px;
     height: 5px;
@@ -328,7 +334,7 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(3)::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 5px;
     height: 5px;
@@ -338,9 +344,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+
 /* 
 .profile-right>ul:nth-child(3) li:nth-child(1)::after {
-    content: "실무 프로젝트 (예정)";
+    content: '실무 프로젝트 (예정)';
     position: absolute;
     font-size: 1.5rem;
     left: 7rem;
@@ -349,7 +356,7 @@ body {
 } */
 
 .profile-right>ul:nth-child(3) li:nth-child(1)::after {
-    content: "DU 전공 체험 프로그램 진행";
+    content: 'DU 전공 체험 프로그램 진행';
     position: absolute;
     font-size: 1.5rem;
     left: 7rem;
@@ -361,7 +368,7 @@ body {
     width: 2px;
     height: 14px;
     background-color: #e0e0e0;
-    content: "";
+    content: '';
     position: absolute;
     top: 82%;
     transform: translateY(-50%);
@@ -369,7 +376,7 @@ body {
 }
 
 .profile-right>ul:nth-child(3) li:nth-child(1)::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 5px;
     height: 5px;
@@ -381,7 +388,7 @@ body {
 }
 
 .profile-right>ul:nth-child(3) li:nth-child(2)::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 5px;
     height: 5px;
@@ -516,7 +523,7 @@ body {
         float: right;
         width: 34.5rem;
         height: 25rem;
-        background: url("../images/profile-words.jpg") no-repeat center / contain;
+        background: url('../images/profile-words.jpg') no-repeat center / contain;
         margin-top: 0rem;
         display: block;
         margin-right: 6rem;
@@ -539,6 +546,90 @@ body {
 
 /* profile 반응형 768px */
 @media screen and (max-width:768px) {
+    .black-bg {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 6;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .black-bg-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    .logo img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .sub-gnb {
+        display: none;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0;
+        background: url('../images/close.png') no-repeat center / contain;
+        margin: 3rem 3rem 0 0;
+        display: block;
+        z-index: 3;
+    }
+    .muenu-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 0;
+        transform: translateY(-50%);
+        background: url('../images/open-kakao01.png') no-repeat center / contain;
+    }
+    .muenu-icon,
+    .menu-icon-gnb {
+        display: block;
+    }
+    .menu-icon-gnb {
+        position: absolute;
+        top: 0;
+        right: -35%;
+        width: 35%;
+        height: 100vh;
+        font-size: 1.7rem;
+        padding: 8rem 2rem 0 2rem;
+        border-left: 2px solid #e0e0e0;
+        background-color: #fff;
+        transition: 0.5s;
+    }
+    .gnb-show {
+        right: 0;
+    }
+    .menu-icon-gnb-depth1 >li{
+        line-height: 8rem;
+        border-bottom: 2px solid #e0e0e0;
+        padding-left: 1.5rem;
+    }
+    .menu-icon-gnb-depth1 >li:last-child {
+        border-bottom: none;
+    }
+    .menu-icon-gnb-depth1 >li >a {
+        color: #666666;
+    }
+
+    .profile-about {
+        font-size: 1.7rem;
+    }
+    .profile-about::before {
+        top: 8px;
+        height: 15px;
+    }
+
     .profile-cont img {
         width: 20rem;
         height: 20rem;
@@ -577,7 +668,7 @@ body {
 }
 
 .publishing-tit::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0rem;
     top: 1rem;
@@ -680,6 +771,10 @@ body {
     left: -7rem;
 }
 
+.swiper-pagination {
+    margin-bottom: 10rem;
+}
+
 .swiper-pagination-bullets {
     text-align: center;
     width: 100%;
@@ -718,32 +813,32 @@ body {
 
 /* 포폴 */
 .slide-cont:nth-child(3) li:nth-child(1) {
-    background: url("../images/worklogo.jpg") no-repeat center / contain;
+    background: url('../images/worklogo.jpg') no-repeat center / contain;
 }
 
 /* 소니 */
 .slide-cont:nth-child(4) li:nth-child(1) {
-    background: url("../images/sony.jpg") no-repeat center / contain;
+    background: url('../images/sony.jpg') no-repeat center / contain;
 }
 
 /* 넥서스 */
 .slide-cont:nth-child(5) li:nth-child(1) {
-    background: url("../images/nexuslogo.png") no-repeat center / contain;
+    background: url('../images/nexuslogo.png') no-repeat center / contain;
 }
 
 /* spc */
 .slide-cont:nth-child(6) li:nth-child(1) {
-    background: url("../images/spclogo.png") no-repeat center / contain;
+    background: url('../images/spclogo.png') no-repeat center / contain;
 }
 
 /* 인하대하교 */
 .slide-cont:nth-child(7) li:nth-child(1) {
-    background: url("../images/Signature_LR01.png") no-repeat center / contain;
+    background: url('../images/Signature_LR01.png') no-repeat center / contain;
 }
 
 /* stx건설 */
 .slide-cont:nth-child(8) li:nth-child(1) {
-    background: url("../images/stxlogo.png") no-repeat center / contain;
+    background: url('../images/stxlogo.png') no-repeat center / contain;
 }
 
 .swiper-pagination-bullet {
@@ -781,16 +876,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     .swiper {
         width: 80%;
     }
+
     .slide-cont>ul {
         font-size: 1.5rem;
     }
+
     .swiper-pagination-bullet {
         margin: 0rem 0.3rem;
     }
+
     span.swiper-pagination-bullet {
         width: 5px;
         height: 5px;
     }
+
     span.swiper-pagination-bullet.swiper-pagination-bullet-active {
         width: 20px;
     }
@@ -798,6 +897,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 
 @media screen and (max-width:768px) {
+    .publishing-tit {
+        font-size: 1.7rem;
+    }
+    .publishing-tit::before {
+        top: 8px;
+        height: 15px;
+    }
+
     .swiper {
         width: 50%;
     }
@@ -903,7 +1010,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .life-list {
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
 }
 
 .life-l {
@@ -917,7 +1024,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .life-list:nth-child(2) .life-l {
     animation-delay: 2s;
 }
-
 .life-list:nth-child(3) .life-l {
     animation-delay: 4s;
 }
@@ -926,7 +1032,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     0% {
         height: 0;
     }
-
     100% {
         height: 26.7rem;
 
@@ -935,6 +1040,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .life-l>p {
     font-family: 'Batang', serif;
+    font-style: italic;
     font-size: 3rem;
     letter-spacing: 0;
     color: #92a1b4;
@@ -1011,14 +1117,26 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     .life-l {
         padding: 0 5rem;
     }
+
     .life-r {
         padding-right: 5rem;
     }
-    
+
 }
 
 /* life 반응형 768px */
 @media screen and (max-width:768px) {
+    .menu-icon-gnb {
+        position: fixed;
+    }
+    .life-tit {
+        font-size: 1.7rem;
+    }
+    .life-tit::before {
+        top: 8px;
+        height: 15px;
+    }
+
     .life-cont {
         height: 180rem;
     }
@@ -1028,22 +1146,18 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     .life-l>p:last-child {
         font-size: 1.5rem;
     }
-
-    .life-cont > ul {
+    .life-cont>ul {
         padding-left: 0;
         font-size: 1.5rem;
     }
-    
     .life-list {
         flex-direction: column-reverse;
     }
-
     .life-r {
         padding-right: 0;
         text-align: center;
         margin-bottom: 5rem;
     }
-
     .life-r::before {
         left: 50%;
         transform: translateX(-50%);
@@ -1080,126 +1194,140 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .link {
     position: relative;
-    width: 100%;
+    width: 70%;
     height: 50rem;
-    display: block;
-    background: olive;
-    margin: 10rem 0;
+    display: flex;
+    margin: 10rem auto;
+    justify-content: space-around;
+    align-items: center;
+    /* background: olive; */
 }
-/* 
-.link > li {
-    position: relative;
+
+.link>div {
+    text-align: center;
+}
+
+.link>div>a:last-child {
+    color: #666666;
+    font-size: 2rem;
     display: inline;
-    background: orange;
-} */
-/* 
-.link > li > a {
+}
+
+.link>div>a:first-child {
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    border-radius: 100%;
+    margin-bottom: 2rem;
+}
+
+.link>div>a:last-child:hover,
+.link>div>a:first-child:hover+:last-child {
+    color: #fb5810;
+}
+
+.contact>.container>p {
     position: relative;
-    width: 35rem;
-    height: 50rem;
-    display: inline-block;
-    background: #92a1b4;
-} */
-
-
-
-/* .github {
-    position: relative;
-    float: left;
-    width: 35rem;
-    height: 50rem;
+    margin: 0 auto 10rem auto;
+    text-align: center;
     display: block;
-    background-color: #92a1b4;
-    margin: 10rem 0 10rem 20rem;
-    border-radius: 10rem;
-}
-.github >a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    width: 10rem;
-    height: 10rem;
-    display: block;
-    background: url("../images/githublink.png") no-repeat center;
-
-}
-.openkakao {
-    float: right;
-    width: 35rem;
-    height: 50rem;
-    display: block;
-    background-color: #92a1b4;
-    margin: 10rem 20rem 10rem 0;
-    border-radius: 10rem;
-} */
-
-
-/* 
-.openkakao {
-    position: relative;
-    display: block;
-    width: 48rem;
-    height: 48rem;
-    background: #e0e0e0;
-    margin: 13.5rem auto;
 }
 
-.openkakao>a {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 36rem;
-    height: 36rem;
-    background: url("../images/openkakao.png") no-repeat center / contain;
-    transform: translate(-50%, -50%);
+.github>a:first-child {
+    background: url('../images/githublink.png') no-repeat center/contain;
 }
 
-.openkakao::after {
-    content: '';
-    position: absolute;
-    right: -2.5rem;
-    top: -2.5rem;
-    display: block;
-    width: 5.5rem;
-    height: 5.5rem;
-    background-color: #92a1b4;
-} */
+.github>a:first-child:hover,
+.githubActive {
+    background: url('../images/githublink_hover.png') no-repeat center/contain !important;
+}
 
-/* contact 반응형 1024px */
-/* @media screen and (max-width:1024px) {
-    .openkakao {
-        width: 40rem;
-        height: 40rem;
+.kakao>a:first-child {
+    background: url('../images/kakao-talk.png') no-repeat center/contain;
+}
+
+.kakao>a:first-child:hover,
+.kakaoActive {
+    background: url('../images/kakao-talk_hover.png') no-repeat center/contain !important;
+}
+
+.gmail>a:first-child {
+    background: url('../images/gmail.png') no-repeat center/contain;
+}
+
+.gmail>a:first-child:hover,
+.gmailActive {
+    background: url('../images/gmail_hover.png') no-repeat center/contain !important;
+}
+
+.link>div>a:first-child:hover,
+.animation {
+    animation-name: icon-rot;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes icon-rot {
+    0% {
+        transform: scaleX(1);
     }
 
-    .openkakao>a {
-        width: 30rem;
+    50% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+/* contact 반응형 1024px */
+@media screen and (max-width:1024px) {
+    .link {
+        width: 80%;
         height: 30rem;
     }
 
-    .openkakao::after {
-        width: 4.8rem;
-        height: 4.8rem;
+    .link>div>a:first-child {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 1.5rem;
     }
-} */
+
+    .link>div>a:last-child {
+        font-size: 1.5rem;
+    }
+
+    .contact>.container>p {
+        font-size: 1.3rem;
+    }
+}
 
 /* contact 반응형 768px */
-/* @media screen and (max-width:768px) {
-    .openkakao {
-        width: 35rem;
-        height: 35rem;
+@media screen and (max-width:768px) {
+    .contact-tit {
+        font-size: 1.7rem;
+    }
+    .contact-tit::before {
+        top: 8px;
+        height: 15px;
     }
 
-    .openkakao>a {
-        width: 26rem;
-        height: 26rem;
+    .link {
+        width: 80%;
+        height: 20rem;
+    }
+    .link>div>a:first-child {
+        width: 10rem;
+        height: 10rem;
+        margin-bottom: 1.5rem;
+    }
+    .link>div>a:last-child {
+        font-size: 1.5rem;
     }
 
-    .openkakao::after {
-        right: -2rem;
-        top: -2rem;
-        width: 4rem;
-        height: 4rem;
+    .contact>.container>p {
+        font-size: 1rem;
     }
-} */
+}
