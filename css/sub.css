@@ -355,7 +355,8 @@ body {
 } */
 
 .profile-right>ul:nth-child(3) li:nth-child(1)::after {
-    content: 'DU 전공 체험 프로그램 진행';
+    content: '전공 체험 프로그램 진행';
+    /* content: 'DU 전공 체험 프로그램 진행'; */
     position: absolute;
     font-size: 1.5rem;
     left: 7rem;
