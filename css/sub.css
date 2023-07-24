@@ -229,24 +229,24 @@ body {
 }
 
 .profile-right>ul:nth-child(1)::before {
-    content: 'Introduce';
+    content: "Introduce";
 }
 
 .profile-right>ul:nth-child(2)::before {
-    content: 'Education';
+    content: "Education & Work";
     right: 0;
 }
 
 .profile-right>ul:nth-child(3)::before {
-    content: 'Activies';
+    content: "Activies";
 }
 
 .profile-right>ul:nth-child(4)::before {
-    content: 'Certification';
+    content: "Certification";
 }
 
 .profile-right>ul:nth-child(5)::before {
-    content: 'Skills';
+    content: "Skills";
 }
 
 .profile-right>ul>li {
@@ -270,9 +270,9 @@ body {
 
 .profile-right>ul:nth-child(2)::after {
     width: 2px;
-    height: 73%;
+    height: 80%;
     background-color: #e0e0e0;
-    content: '';
+    content: "";
     position: absolute;
     top: 62%;
     transform: translateY(-50%);
@@ -285,23 +285,29 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(1)::before {
-    content: '2021';
+    content: "2022";
     position: absolute;
     right: 0;
     top: 0;
     font-size: 1.5rem;
 }
-
 .profile-right>ul:nth-child(2) li:nth-child(2)::before {
-    content: '2021';
+    content: "2021";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+.profile-right>ul:nth-child(2) li:nth-child(3)::before {
+    content: "2021";
     position: absolute;
     right: 0;
     top: 0;
     font-size: 1.5rem;
 }
 
-.profile-right>ul:nth-child(2) li:nth-child(3)::before {
-    content: '2016';
+.profile-right>ul:nth-child(2) li:nth-child(4)::before {
+    content: "2016";
     position: absolute;
     right: 0;
     top: 0;
@@ -309,31 +315,42 @@ body {
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(1)::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 5px;
     height: 5px;
     background-color: #e0e0e0;
     border-radius: 50%;
     right: 47.5px;
-    top: 25%;
+    top: 65%;
     transform: translateY(-50%);
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(2)::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 5px;
     height: 5px;
     background-color: #e0e0e0;
     border-radius: 50%;
     right: 47.5px;
-    top: 50%;
+    top: 29%;
     transform: translateY(-50%);
 }
 
 .profile-right>ul:nth-child(2) li:nth-child(3)::after {
-    content: '';
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    right: 47.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.profile-right>ul:nth-child(2) li:nth-child(4)::after {
+    content: "";
     position: absolute;
     width: 5px;
     height: 5px;
@@ -344,19 +361,33 @@ body {
     transform: translateY(-50%);
 }
 
-/* 
 .profile-right>ul:nth-child(3) li:nth-child(1)::after {
-    content: '실무 프로젝트 (예정)';
+    content: "'Recipe Management System' 웹 화면 개발(진행중)";
     position: absolute;
     font-size: 1.5rem;
     left: 7rem;
     top: 50%;
     transform: translateY(-50%);
-} */
+}
 
-.profile-right>ul:nth-child(3) li:nth-child(1)::after {
-    content: '전공 체험 프로그램 진행';
-    /* content: 'DU 전공 체험 프로그램 진행'; */
+.profile-right>ul:nth-child(3) li:nth-child(2)::after {
+    content: "'Equipment Automation System' 웹 화면 개발";
+    position: absolute;
+    font-size: 1.5rem;
+    left: 7rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.profile-right>ul:nth-child(3) li:nth-child(3)::after {
+    content: "'Equipment Automation Process' 웹 화면 개발";
+    position: absolute;
+    font-size: 1.5rem;
+    left: 7rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.profile-right>ul:nth-child(3) li:nth-child(4)::after {
+    content: "DU 전공 체험 프로그램 진행";
     position: absolute;
     font-size: 1.5rem;
     left: 7rem;
@@ -366,17 +397,17 @@ body {
 
 .profile-right>ul:nth-child(3)::after {
     width: 2px;
-    height: 14px;
+    height: 78%;
     background-color: #e0e0e0;
-    content: '';
+    content: "";
     position: absolute;
-    top: 82%;
+    top: 62%;
     transform: translateY(-50%);
     left: 49px;
 }
 
 .profile-right>ul:nth-child(3) li:nth-child(1)::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 5px;
     height: 5px;
@@ -388,7 +419,40 @@ body {
 }
 
 .profile-right>ul:nth-child(3) li:nth-child(2)::before {
-    content: '';
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    left: 47.5px;
+    top: 50%;
+    transform: translateY(-25%);
+}
+.profile-right>ul:nth-child(3) li:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    left: 47.5px;
+    top: 50%;
+    transform: translateY(-25%);
+}
+.profile-right>ul:nth-child(3) li:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    left: 47.5px;
+    top: 50%;
+    transform: translateY(-25%);
+}
+.profile-right>ul:nth-child(3) li:nth-child(5)::before {
+    content: "";
     position: absolute;
     width: 5px;
     height: 5px;
@@ -470,7 +534,7 @@ body {
     left: 6rem;
     top: 50%;
     display: block;
-    width: 10rem;
+    width: 18rem;
     height: 1rem;
     background-color: #2a3f6a;
     border-radius: 5px;
@@ -496,7 +560,7 @@ body {
     left: 6rem;
     top: 50%;
     display: block;
-    width: 5rem;
+    width: 18rem;
     height: 1rem;
     background-color: #92a1b4;
     border-radius: 5px;
